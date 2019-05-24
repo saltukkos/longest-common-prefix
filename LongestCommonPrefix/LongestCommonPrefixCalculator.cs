@@ -10,6 +10,7 @@ namespace LongestCommonPrefix
 
         private readonly int _stringLength;
 
+        // Complexity - O( |str| * ln(|str|) )
         public LongestCommonPrefixCalculator([NotNull] string str)
         {
             _suffixesArrayCalculator = new SuffixesArrayCalculator(str);

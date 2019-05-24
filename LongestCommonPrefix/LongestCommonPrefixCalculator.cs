@@ -46,7 +46,7 @@ namespace LongestCommonPrefix
         {
             int i;
             // ReSharper disable once EmptyEmbeddedStatement
-            for (i = 0; (n & 1) != 0; n >>= 1, ++i) ;
+            for (i = 0; n != 0; n >>= 1, ++i) ;
             return i;
         }
     }

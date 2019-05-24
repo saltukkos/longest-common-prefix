@@ -32,6 +32,11 @@ namespace LongestCommonPrefix.Tests
                 {
                     var maxSize = longestCommonPrefixCalculator.Get(i, j);
                     Assert.That(str.Substring(i, maxSize), Is.EqualTo(str.Substring(j, maxSize)));
+
+                    if (i + maxSize < str.Length && j + maxSize < str.Length)
+                    {
+                        Assert.That(str.Substring(i, maxSize + 1), Is.Not.EqualTo(str.Substring(j, maxSize + 1)));
+                    }
                 }
 
             }
